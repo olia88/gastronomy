@@ -26,6 +26,10 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+TEMPLATE_DIRS = (
+    '/Python34/Scripts/gastronomy/templates',
+    '/Python34/Scripts/gastronomy/recipes/templates',
+)
 
 # Application definition
 

@@ -1,0 +1,12 @@
+{% extends "main.html" %}
+
+{% block recipe %}
+{% for recipe in recipes %}
+    <h6>Дата публикации: {{recipe.recipe_date}}</h6>
+    <h4><a href="/recipes/{{recipe.id}}">{{recipe.recipe_title}}</a></h4>
+    <p>{{recipe.recipe_ingredients}}</p>
+    <p>{{recipe.recipe_text}}</p>
+    <p>Понравилось:{{recipe.recipe_likes}}</p>
+<hr>
+{% endfor %}
+{% endblock %}

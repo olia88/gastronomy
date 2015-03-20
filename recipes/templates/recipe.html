@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block title %}{{recipes.models.recipe_title}}{% endblock %}
+
+{% block recipe %}
+<h4>Дата публикации: {{recipe.recipe_date}}</h4>
+<h2>{{recipe.recipe_title}}</h2>
+<p>{{recipe.recipe_ingredients}}</p>
+<p>{{recipe.recipe_text}}</p>
+<hr>
+
+<div class='large-offset-1 large-8 columns'>
+    <p>Комментарии:</p>
+    {% for comment in comments %}
+    <p>{{comment.comments_text}}</p>
+    {%endfor%}
+{% endblock %}
